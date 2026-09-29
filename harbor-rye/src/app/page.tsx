@@ -1,69 +1,72 @@
-import Image from "next/image";
+"use client";
+
+import Hero from "@/components/Hero";
+import MenuSection from "@/components/MenuSection";
+import ChefStory from "@/components/ChefStory";
+import Gallery from "@/components/Gallery";
+import HoursLocation from "@/components/HoursLocation";
+import ReservationForm from "@/components/ReservationForm";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+
+const brunchItems = [
+  { name: "Lobster Benedict", desc: "Poached eggs, toasted brioche, citrus hollandaise, fresh lobster", price: "24" },
+  { name: "Harbor Grain Bowl", desc: "Farro, roasted squash, poached egg, tahini, pickled onions", price: "18" },
+  { name: "Salt-Cod Hash", desc: "Crispy potatoes, confit garlic, fried egg, chimichurri", price: "20" },
+  { name: "Brioche French Toast", desc: "Brown butter, bourbon maple, crème fraîche, seasonal berries", price: "17" },
+  { name: "Oyster Po'Boy", desc: "Cornmeal-fried oysters, shaved fennel, rémoulade, house-cut fries", price: "19" },
+];
+
+const dinnerItems = [
+  { name: "Seared Scallops", desc: "Cauliflower purée, brown butter, capers, micro greens", price: "32" },
+  { name: "Heritage Pork Ragu", desc: "Pappardelle, slow-cooked pork, pecorino, gremolata", price: "28" },
+  { name: "Grilled Local Halibut", desc: "Saffron broth, fingerling potatoes, fennel, lemon oil", price: "36" },
+  { name: "Dry-Aged Ribeye", desc: "Charred broccolini, roasted shallot, bone marrow butter", price: "48" },
+  { name: "Wood-Fired Branzino", desc: "Whole fish, salsa verde, grilled lemon, herbs", price: "34" },
+];
+
+const cocktailItems = [
+  { name: "Sea Smoke", desc: "Mezcal, lime, jalapeño, smoked salt, agave", price: "16" },
+  { name: "Saltwater Spritz", desc: "Aperol, prosecco, grapefruit, sea salt rim", price: "15" },
+  { name: "Dune Rose", desc: "Gin, rose, elderflower, lemon, sparkling water", price: "16" },
+  { name: "The Mariner", desc: "Bourbon, amaro, orange, bitters, cherry", price: "18" },
+  { name: "Tidal Wave", desc: "Vodka, cucumber, mint, lime, ginger beer", price: "15" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      {/* Menu Section */}
+      <section id="menu" className="relative px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <Badge className="mb-4 bg-stone-800 text-stone-50 text-xs uppercase tracking-widest">
+              The Menu
+            </Badge>
+            <h2 className="font-heading text-3xl leading-tight text-stone-800 sm:text-4xl">
+              From the Coast
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-stone-500">
+              Seasonal, sustainable, and rooted in the Pacific.
+            </p>
+          </div>
+
+          <div className="mt-16">
+            <MenuSection title="Brunch" tagline="Weekend mornings on the terrace" items={brunchItems} />
+            <MenuSection title="Dinner" tagline="Evening tasting journeys" items={dinnerItems} reverse />
+            <MenuSection title="Cocktails" tagline="Crafted with sea salt & citrus" items={cocktailItems} />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <Separator className="mx-auto max-w-2xl bg-stone-200/60" />
+      <ChefStory />
+      <Separator className="mx-auto max-w-2xl bg-stone-200/60" />
+      <Gallery />
+      <HoursLocation />
+      <ReservationForm />
+    </>
   );
 }
