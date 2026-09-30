@@ -2,45 +2,45 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#menu", label: "Menu" },
-  { href: "#story", label: "Our Story" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#hours", label: "Hours & Location" },
-  { href: "#reservations", label: "Reservations" },
+  { href: "/menu", label: "Menu" },
+  { href: "/wine", label: "Wine" },
+  { href: "/reserve", label: "Reservations" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-stone-200/70 bg-[#faf8f5]/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="font-heading text-xl tracking-wide text-stone-800 sm:text-2xl"
-        >
+    <header className="sticky top-0 z-50 w-full border-b border-[#C9A84C]/15 bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <Link href="/" className="wordmark text-2xl sm:text-3xl">
           Harbor & Rye
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium uppercase tracking-widest text-stone-600 transition-colors hover:text-stone-900"
+              className={`text-sm uppercase tracking-[0.15em] transition-colors ${
+                pathname === link.href
+                  ? "text-[#C9A84C]"
+                  : "text-foreground/60 hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="#reservations">
-            <Button className="rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700">
-              Reserve a Table
+          <Link href="/reserve">
+            <Button className="rounded-full bg-[#C9A84C] px-7 text-xs uppercase tracking-[0.12em] text-[#0a1628] hover:bg-[#D4B85C] font-semibold">
+              Book a Table
             </Button>
           </Link>
         </nav>
@@ -52,29 +52,33 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           {open ? (
-            <X className="h-6 w-6 text-stone-800" />
+            <X className="h-6 w-6 text-foreground" />
           ) : (
-            <Menu className="h-6 w-6 text-stone-800" />
+            <Menu className="h-6 w-6 text-foreground" />
           )}
         </button>
       </div>
 
       {/* Mobile nav */}
       {open && (
-        <nav className="flex flex-col gap-4 border-t border-stone-200/70 bg-[#faf8f5] px-4 py-6 md:hidden">
+        <nav className="flex flex-col gap-5 border-t border-[#C9A84C]/15 bg-background px-4 py-6 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium uppercase tracking-widest text-stone-600 transition-colors hover:text-stone-900"
+              className={`text-sm uppercase tracking-[0.15em] transition-colors ${
+                pathname === link.href
+                  ? "text-[#C9A84C]"
+                  : "text-foreground/60 hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="#reservations" onClick={() => setOpen(false)}>
-            <Button className="mt-2 rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700">
-              Reserve a Table
+          <Link href="/reserve" onClick={() => setOpen(false)}>
+            <Button className="mt-2 w-full rounded-full bg-[#C9A84C] px-7 text-xs uppercase tracking-[0.12em] text-[#0a1628] hover:bg-[#D4B85C] font-semibold">
+              Book a Table
             </Button>
           </Link>
         </nav>
