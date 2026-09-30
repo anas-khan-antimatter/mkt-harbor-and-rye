@@ -38,12 +38,11 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button
-            asChild
-            className="rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700"
-          >
-            <Link href="#reservations">Reserve a Table</Link>
-          </Button>
+          <Link href="#reservations">
+            <Button className="rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700">
+              Reserve a Table
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile menu toggle */}
@@ -73,14 +72,11 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button
-            asChild
-            className="mt-2 rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700"
-          >
-            <Link href="#reservations" onClick={() => setOpen(false)}>
+          <Link href="#reservations" onClick={() => setOpen(false)}>
+            <Button className="mt-2 rounded-full bg-stone-800 px-6 text-sm uppercase tracking-widest text-stone-50 hover:bg-stone-700">
               Reserve a Table
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </nav>
       )}
     </header>

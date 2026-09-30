@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -35,21 +34,23 @@ export default function Hero() {
           Where the sea meets the shore — an intimate escape on the edge of the Pacific.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button
-            asChild
-            size="lg"
-            className="w-full rounded-full bg-stone-50 px-8 text-sm uppercase tracking-widest text-stone-900 hover:bg-stone-200 sm:w-auto"
-          >
-            <a href="#reservations">Reserve a Table</a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="w-full rounded-full border-stone-400/40 px-8 text-sm uppercase tracking-widest text-stone-200 hover:bg-stone-800/50 sm:w-auto"
-          >
-            <a href="#menu">Explore the Menu</a>
-          </Button>
+          <a href="#reservations">
+            <Button
+              size="lg"
+              className="w-full rounded-full bg-stone-50 px-8 text-sm uppercase tracking-widest text-stone-900 hover:bg-stone-200 sm:w-auto"
+            >
+              Reserve a Table
+            </Button>
+          </a>
+          <a href="#menu">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full rounded-full border-stone-400/40 px-8 text-sm uppercase tracking-widest text-stone-200 hover:bg-stone-800/50 sm:w-auto"
+            >
+              Explore the Menu
+            </Button>
+          </a>
         </div>
       </div>
 

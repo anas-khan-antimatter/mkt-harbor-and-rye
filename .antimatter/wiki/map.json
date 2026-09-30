@@ -1,21 +1,130 @@
 {
-  "root": "/tmp/am-ws/ch_mun9nkzx_1",
-  "name": "ch_mun9nkzx_1",
-  "generatedAt": "2026-09-29T22:47:09.132Z",
-  "fileCount": 1,
-  "dirCount": 1,
+  "root": "/tmp/am-ws/c-1790730083628-au48c",
+  "name": "c-1790730083628-au48c",
+  "generatedAt": "2026-09-30T01:17:31.531Z",
+  "fileCount": 47,
+  "dirCount": 8,
   "languages": {
-    "Markdown": 1
+    "Markdown": 9,
+    "JSON": 5,
+    "JavaScript": 2,
+    "TypeScript": 22,
+    "CSS": 1
   },
   "keyFiles": [
     "README.md"
   ],
   "directories": [
     {
+      "dir": ".antimatter/wiki",
+      "fileCount": 6,
+      "files": [
+        "index.md",
+        "log.md",
+        "map.json",
+        "map.md",
+        "overview.md",
+        "schema.md"
+      ],
+      "symbols": []
+    },
+    {
       "dir": "(root)",
+      "fileCount": 2,
+      "files": [
+        ".gitignore",
+        "README.md"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye",
+      "fileCount": 11,
+      "files": [
+        ".gitignore",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "components.json",
+        "eslint.config.mjs",
+        "next.config.ts",
+        "package-lock.json",
+        "package.json",
+        "postcss.config.mjs",
+        "README.md",
+        "tsconfig.json"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/public",
+      "fileCount": 5,
+      "files": [
+        "file.svg",
+        "globe.svg",
+        "next.svg",
+        "vercel.svg",
+        "window.svg"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/src/app",
+      "fileCount": 4,
+      "files": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ],
+      "symbols": [
+        {
+          "name": "metadata",
+          "kind": "const"
+        }
+      ]
+    },
+    {
+      "dir": "harbor-rye/src/components",
+      "fileCount": 8,
+      "files": [
+        "ChefStory.tsx",
+        "Footer.tsx",
+        "Gallery.tsx",
+        "Header.tsx",
+        "Hero.tsx",
+        "HoursLocation.tsx",
+        "MenuSection.tsx",
+        "ReservationForm.tsx"
+      ],
+      "symbols": [
+        {
+          "name": "MenuItem",
+          "kind": "interface"
+        }
+      ]
+    },
+    {
+      "dir": "harbor-rye/src/components/ui",
+      "fileCount": 10,
+      "files": [
+        "badge.tsx",
+        "button.tsx",
+        "card.tsx",
+        "dialog.tsx",
+        "input.tsx",
+        "label.tsx",
+        "select.tsx",
+        "separator.tsx",
+        "sheet.tsx",
+        "textarea.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/src/lib",
       "fileCount": 1,
       "files": [
-        "README.md"
+        "utils.ts"
       ],
       "symbols": []
     }
