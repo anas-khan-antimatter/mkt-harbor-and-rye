@@ -53,7 +53,8 @@ export default function ReservePage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const update = (field: keyof FormData, value: string) => {
+  const update = (field: keyof FormData, value: string | null) => {
+    if (value === null) return;
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
