@@ -15,9 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Harbor & Rye — Coastal Restaurant",
+  title: "Harbor & Rye — Coastal Restaurant & Wine Bar",
   description:
-    "An intimate coastal dining experience on the edge of the sea. Brunch, dinner, and craft cocktails.",
+    "An intimate coastal dining experience on the edge of the sea. Brunch, dinner, craft cocktails, and an award-winning wine list.",
+  keywords: "coastal dining, fine dining, seafood, wine bar, Monterey, Seaside CA",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#faf8f5] text-stone-800">
+      <body className="min-h-full flex flex-col bg-[#12100e] text-stone-200">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
