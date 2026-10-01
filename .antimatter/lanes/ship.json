@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "runsOn": "ubuntu-latest",
+  "setup": ["npm ci"],
+  "build": ["npm run build"],
+  "probes": [
+    { "kind": "browser", "url": "/" },
+    { "kind": "browser", "url": "/dinner/bar" },
+    { "kind": "browser", "url": "/ink" },
+    { "kind": "browser", "url": "/menu" },
+    { "kind": "browser", "url": "/reserve" },
+    { "kind": "browser", "url": "/shellfish" },
+    { "kind": "browser", "url": "/wine" },
+    { "kind": "http", "url": "/api/reserve" },
+    { "kind": "http", "url": "/api/specials" }
+  ]
+}
