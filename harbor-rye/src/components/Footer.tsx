@@ -25,8 +25,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/dinner/bar" className="text-foreground/60 hover:text-foreground transition-colors">
+                  Bar
+                </Link>
+              </li>
+              <li>
                 <Link href="/wine" className="text-foreground/60 hover:text-foreground transition-colors">
                   Wine List
+                </Link>
+              </li>
+              <li>
+                <Link href="/shellfish" className="text-foreground/60 hover:text-foreground transition-colors">
+                  Shellfish
+                </Link>
+              </li>
+              <li>
+                <Link href="/ink" className="text-foreground/60 hover:text-foreground transition-colors">
+                  Ink
                 </Link>
               </li>
               <li>
