@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "runsOn": "ubuntu-latest",
+  "setup": ["cd harbor-rye && npm ci"],
+  "build": ["cd harbor-rye && npm run build"],
+  "probes": [
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/dinner/bar" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/ink" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/menu" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/reserve" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/shellfish" },
+    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/wine" },
+    { "kind": "http", "url": "https://mkt-harbor-and-rye.vercel.app/api/reserve" },
+    { "kind": "http", "url": "https://mkt-harbor-and-rye.vercel.app/api/specials" }
+  ]
+}
