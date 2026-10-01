@@ -98,7 +98,7 @@ export default function ShellfishPage() {
           }}
         />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <Shellfish className="mx-auto h-10 w-10 text-[#C9A84C]" />
+          <Shell className="mx-auto h-10 w-10 text-[#C9A84C]" />
           <span className="mt-4 block font-heading text-xs uppercase tracking-[0.2em] text-[#C9A84C]">
             From the Tidal Waters
           </span>
