@@ -1,6 +1,6 @@
 "use client";
 
-import { Shellfish, Shrimp, Fish, Crab } from "lucide-react";
+import { Shell, Shrimp, Fish, ShrimpOff } from "lucide-react";
 
 interface ShellfishDish {
   name: string;
