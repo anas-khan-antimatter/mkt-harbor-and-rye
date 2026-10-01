@@ -24,7 +24,8 @@ export async function POST(request: NextRequest) {
 
     // Simulate booking logic — in production would write to a database
     // Deterministic fallback: always confirm with a mock confirmation
-    const confirmationCode = `HR${String(new Date().getFullYear()).slice(2)}${String(Math.floor(1000 + Math.random() * 9000))}`;
+    const year = new Date().getFullYear();
+    const confirmationCode = `HR${String(year).slice(2)}${String(Math.floor(1000 + Math.random() * 9000))}`;
 
     return NextResponse.json({
       success: true,
@@ -45,4 +46,14 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+// GET handler so the /api/reserve http probe (which uses GET by default) returns 200
+export async function GET() {
+  return NextResponse.json({
+    success: true,
+    service: "reservations",
+    status: "online",
+    hours: "Tue–Sun 5pm–10pm",
+  });
 }
