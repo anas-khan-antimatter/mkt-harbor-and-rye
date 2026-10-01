@@ -1,17 +1,48 @@
 {
   "schema": 1,
   "runsOn": "ubuntu-latest",
-  "setup": ["cd harbor-rye && npm ci"],
-  "build": ["cd harbor-rye && npm run build"],
+  "setup": [
+    "cd harbor-rye && npm ci"
+  ],
+  "build": [
+    "cd harbor-rye && npm run build"
+  ],
   "probes": [
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/dinner/bar" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/ink" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/menu" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/reserve" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/shellfish" },
-    { "kind": "browser", "url": "https://mkt-harbor-and-rye.vercel.app/wine" },
-    { "kind": "http", "url": "https://mkt-harbor-and-rye.vercel.app/api/reserve" },
-    { "kind": "http", "url": "https://mkt-harbor-and-rye.vercel.app/api/specials" }
+    {
+      "kind": "browser",
+      "url": "/"
+    },
+    {
+      "kind": "browser",
+      "url": "/dinner/bar"
+    },
+    {
+      "kind": "browser",
+      "url": "/ink"
+    },
+    {
+      "kind": "browser",
+      "url": "/menu"
+    },
+    {
+      "kind": "browser",
+      "url": "/reserve"
+    },
+    {
+      "kind": "browser",
+      "url": "/shellfish"
+    },
+    {
+      "kind": "browser",
+      "url": "/wine"
+    },
+    {
+      "kind": "http",
+      "url": "/api/reserve"
+    },
+    {
+      "kind": "http",
+      "url": "/api/specials"
+    }
   ]
 }
