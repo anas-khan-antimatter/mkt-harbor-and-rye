@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { BookOpen, Quote, PenLine, MessageCircle } from "lucide-react";
 
 interface InkEntry {
