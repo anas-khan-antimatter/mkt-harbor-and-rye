@@ -1,14 +1,15 @@
 {
   "root": "/tmp/am-ws/c-1790732952466-4gc6v",
   "name": "c-1790732952466-4gc6v",
-  "generatedAt": "2026-10-01T03:19:19.959Z",
-  "fileCount": 54,
-  "dirCount": 14,
+  "generatedAt": "2026-10-02T22:24:08.152Z",
+  "fileCount": 62,
+  "dirCount": 21,
   "languages": {
-    "JSON": 6,
+    "JSON": 8,
     "Markdown": 9,
-    "JavaScript": 2,
-    "TypeScript": 28,
+    "JavaScript": 4,
+    "YAML": 1,
+    "TypeScript": 31,
     "CSS": 1
   },
   "keyFiles": [
@@ -24,6 +25,14 @@
       "symbols": []
     },
     {
+      "dir": ".antimatter/lanes",
+      "fileCount": 1,
+      "files": [
+        "ship.json"
+      ],
+      "symbols": []
+    },
+    {
       "dir": ".antimatter/wiki",
       "fileCount": 6,
       "files": [
@@ -33,6 +42,23 @@
         "map.md",
         "overview.md",
         "schema.md"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": ".github/antimatter",
+      "fileCount": 2,
+      "files": [
+        "lane-runner.mjs",
+        "store-release.mjs"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": ".github/workflows",
+      "fileCount": 1,
+      "files": [
+        "antimatter-lane.yml"
       ],
       "symbols": []
     },
@@ -60,6 +86,14 @@
         "postcss.config.mjs",
         "README.md",
         "tsconfig.json"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/.antimatter/lanes",
+      "fileCount": 1,
+      "files": [
+        "ship.json"
       ],
       "symbols": []
     },
@@ -101,6 +135,10 @@
         {
           "name": "POST",
           "kind": "fn"
+        },
+        {
+          "name": "GET",
+          "kind": "fn"
         }
       ]
     },
@@ -118,6 +156,22 @@
       ]
     },
     {
+      "dir": "harbor-rye/src/app/dinner/bar",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/src/app/ink",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
       "dir": "harbor-rye/src/app/menu",
       "fileCount": 1,
       "files": [
@@ -127,6 +181,14 @@
     },
     {
       "dir": "harbor-rye/src/app/reserve",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "harbor-rye/src/app/shellfish",
       "fileCount": 1,
       "files": [
         "page.tsx"
